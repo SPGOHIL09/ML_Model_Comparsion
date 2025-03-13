@@ -19,7 +19,7 @@ Welcome to the **ML Model Finder** project! This application allows you to uploa
 ### 2. **Dataset Uploaded Successfully**
 ![Dataset Uploaded Successfully](images/Screenshot%202025-03-13%20at%2023.47.23.png)
 
-- **Description**: After uploading a dataset (e.g., `diabetes.csv`), the application displays the filename and a list of recent uploads.
+- **Description**: After uploading a dataset (e.g., `diabetes.csv`, `hearts.csv`), the application displays the filename and a list of recent uploads.
 - **Features**:
   - Confirmation of successful upload.
   - Navigation buttons to proceed to the analysis or go back to upload a new dataset.
@@ -60,6 +60,15 @@ Welcome to the **ML Model Finder** project! This application allows you to uploa
 
 ---
 
+### 6. **Feature Importance - How much each feature affect the outcome (for Classification)**
+
+- **Description**: The **Feature Importance** section provides a importance of each feature that affects on the outcome
+- **Key Information**:
+  - A table providing percentage about each feature importancr on the outcome
+
+
+---
+
 ## How to Use
 
 1. **Upload Your Dataset**: Drag and drop your dataset (CSV or Excel) into the upload area or click to browse your computer.
@@ -74,7 +83,9 @@ Welcome to the **ML Model Finder** project! This application allows you to uploa
 - **Frontend**: HTML, CSS, JavaScript, Bootstrap
 - **Backend**: Python, Flask
 - **Machine Learning**: Scikit-learn, Pandas, NumPy
-- **Deployment**: Vercel
+- **Regressor Models**: Linear Regression, SVR, RandomForestRegressor, AdaBoostRegressor, KNeighborsRegressor, DecisionTreeRegressor
+- **Classification Models**: Logistic Regression, SVC, RandomForestClassifier, AdaBoostClassifier, KNeighborsClassifier, DecisionTreeClassifier
+- **Deployment**: Render
 
 ---
 
