@@ -1,3 +1,4 @@
 /temp
 /.venv
 .vercel
+/app.__pycache__
