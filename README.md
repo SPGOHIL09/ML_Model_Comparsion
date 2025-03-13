@@ -94,3 +94,11 @@ Welcome to the **ML Model Finder** project! This application allows you to uploa
 1. Clone the repository:
    ```bash
    git clone https://github.com/SPGOHIL09/ML_Model_Comparsion.git
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+3. Run the application:
+   ```bash
+   python run.py
