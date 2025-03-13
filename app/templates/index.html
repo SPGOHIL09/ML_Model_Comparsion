@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <!-- Redesigned Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <!-- Logo and Brand -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="rounded-circle bg-primary d-flex justify-content-center align-items-center me-2" style="width: 40px; height: 40px;">
+                    <i class="fas fa-brain text-white"></i>
+                </div>
+                <span class="fw-bold">ML Model Finder</span>
+                </a>
+                
+                <!-- Toggle Button for Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-book me-1"></i> Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-question-circle me-1"></i> Help</a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#">
+                        <i class="fas fa-sign-in-alt me-1"></i> Sign In
+                    </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container my-4 flex-grow-1">
+            <!-- Redesigned Upload Card -->
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                            <!-- Card Header with Wave Design -->
+                            <div class="position-relative">
+                                <div class="bg-primary py-4 px-4 text-white">
+                                    <h2 class="fw-bold mb-0">
+                                        <i class="fas fa-robot me-2"></i> AI Model Finder
+                                    </h2>
+                                    <p class="mb-0 opacity-75">Upload your dataset and discover the perfect model</p>
+                                </div>
+                                <!-- Wave Shape Divider -->
+                                <div class="position-absolute bottom-0 start-0 w-100 overflow-hidden" style="transform: translateY(98%);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="height: 30px; width: 100%;">
+                                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-primary"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Card Body -->
+                            <div class="card-body p-4 p-lg-5">
+                                <!-- Steps Indicator -->
+                                <!-- <div class="row mb-4">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between position-relative">
+                                           
+                                            <div class="position-absolute top-50 start-0 end-0 translate-middle-y">
+                                                <div class="progress" style="height: 3px;">
+                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%"></div>
+                                                </div>
+                                            </div>
+                                            
+                                           
+                                            <div class="d-flex flex-column align-items-center position-relative z-1">
+                                                <div class="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center mb-2" style="width: 40px; height: 40px;">
+                                                    <i class="fas fa-file-upload"></i>
+                                                </div>
+                                                <span class="small fw-bold text-primary">Upload</span>
+                                            </div>
+                                        
+                                            <div class="d-flex flex-column align-items-center position-relative z-1">
+                                                <div class="rounded-circle bg-light text-secondary d-flex justify-content-center align-items-center mb-2" style="width: 40px; height: 40px;">
+                                                    <i class="fas fa-cogs"></i>
+                                                </div>
+                                                <span class="small fw-bold text-secondary">Process</span>
+                                            </div>
+                                            
+                                            <div class="d-flex flex-column align-items-center position-relative z-1">
+                                                <div class="rounded-circle bg-light text-secondary d-flex justify-content-center align-items-center mb-2" style="width: 40px; height: 40px;">
+                                                    <i class="fas fa-chart-bar"></i>
+                                                </div>
+                                                <span class="small fw-bold text-secondary">Analyze</span>
+                                            </div>
+                                            
+                                            <div class="d-flex flex-column align-items-center position-relative z-1">
+                                                <div class="rounded-circle bg-light text-secondary d-flex justify-content-center align-items-center mb-2" style="width: 40px; height: 40px;">
+                                                    <i class="fas fa-download"></i>
+                                                </div>
+                                                <span class="small fw-bold text-secondary">Results</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                
+                                <!-- Upload Section -->
+                                <div class="text-center py-4">
+                                    <div class="d-flex justify-content-center mb-4">
+                                        <div class="upload-area d-flex flex-column justify-content-center align-items-center rounded-4 border-2 border-dashed border-primary p-5 w-100" style="background-color: rgba(59, 111, 232, 0.03);" id="uploadArea">
+                                            <img src="/static/file-upload-illustration.svg" alt="Upload illustration" class="mb-4" height="100" width="100">
+                                            <h4 class="mb-2">Drop your dataset here</h4>
+                                            <p class="text-muted mb-4">or browse from your computer</p>
+                                            
+                                            <div>
+                                                <button class="btn btn-primary px-4 py-2 rounded-pill">
+                                                    <i class="fas fa-file-csv me-2"></i> Select File
+                                                </button>
+                                                <input type="file" id="fileUpload" class="d-none" accept=".csv, .xls, .xlsx">
+                                            </div>
+                                            
+                                            <div class="small text-muted mt-4">
+                                                <span class="d-block mb-1">Supported formats: CSV, Excel (.xls, .xlsx)</span>
+                                                <span class="d-block">Maximum file size: 100MB</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress mt-3 d-none" id="uploadProgress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 0%"></div>
+                                    </div>
+                                    
+                                    <div class="alert alert-danger mt-3 d-none" id="errorAlert"></div>
+                                    
+                                    <!-- Recent Files Section -->
+                                    <div class="mt-4">
+                                        <h6 class="text-start mb-3 text-secondary">Recent uploads</h6>
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="rounded-circle bg-light d-flex justify-content-center align-items-center me-3" style="width: 40px; height: 40px;">
+                                                        <i class="fas fa-file-csv text-primary"></i>
+                                                    </div>
+                                                    <div class="text-start">
+                                                        <h6 class="mb-0">customer_data.csv</h6>
+                                                        <small class="text-muted">Uploaded 2 days ago</small>
+                                                    </div>
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">Completed</span>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="rounded-circle bg-light d-flex justify-content-center align-items-center me-3" style="width: 40px; height: 40px;">
+                                                        <i class="fas fa-file-excel text-success"></i>
+                                                    </div>
+                                                    <div class="text-start">
+                                                        <h6 class="mb-0">sales_data_2025.xlsx</h6>
+                                                        <small class="text-muted">Uploaded 1 week ago</small>
+                                                    </div>
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">Completed</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Bottom Action Buttons -->
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button class="btn btn-outline-secondary px-4" disabled>
+                                        <i class="fas fa-arrow-left me-2"></i> Back
+                                    </button>
+                                    <button class="btn btn-primary px-4" id="uploadButton" disabled>
+                                        Next <i class="fas fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div class="position-fixed top-0 start-0 w-100 h-100 bg-white bg-opacity-75 d-flex justify-content-center align-items-center d-none" id="loadingContainer" style="z-index: 1050;">
+                <div class="text-center p-4 bg-white rounded shadow">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <p class="mt-3 mb-0">Analyzing your data and training models...</p>
+                    <p class="small text-muted">This may take a few moments</p>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="d-none mt-4" id="resultsContainer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+                                <h3 class="mb-0">Analysis Results</h3>
+                                <button class="btn btn-outline-primary" id="backButton">
+                                    <i class="fas fa-arrow-left me-2"></i> Upload New Dataset
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <ul class="nav nav-tabs mb-3" id="resultTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active fw-medium" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab">Summary</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link fw-medium" id="data-insights-tab" data-bs-toggle="tab" data-bs-target="#dataInsights" type="button" role="tab">Data Insights</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link fw-medium" id="model-comparison-tab" data-bs-toggle="tab" data-bs-target="#modelComparison" type="button" role="tab">Model Comparison</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link fw-medium" id="feature-importance-tab" data-bs-toggle="tab" data-bs-target="#featureImportance" type="button" role="tab">Feature Importance</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content p-2" id="resultTabsContent">
+                                    <!-- Summary Tab -->
+                                    <div class="tab-pane fade show active" id="summary" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card shadow-sm mb-4">
+                                                    <div class="card-body">
+                                                        <h4 class="border-bottom pb-2 text-primary">Dataset Overview</h4>
+                                                        <p><strong>Filename:</strong> <span id="filename"></span></p>
+                                                        <p><strong>Rows:</strong> <span id="rowCount"></span></p>
+                                                        <p><strong>Columns:</strong> <span id="columnCount"></span></p>
+                                                        <p><strong>Target Column:</strong> <span id="targetColumn"></span></p>
+                                                        <p class="mb-0"><strong>Problem Type:</strong> <span id="problemType"></span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card shadow-sm mb-4">
+                                                    <div class="card-body">
+                                                        <h4 class="border-bottom pb-2 text-primary">Best Model</h4>
+                                                        <div class="badge bg-primary rounded-pill px-3 py-2 mb-3 fs-6" id="bestModelBadge"></div>
+                                                        <p><strong>Performance Score:</strong> <span id="modelScore"></span></p>
+                                                        <p class="mb-0"><strong>Evaluation Method:</strong> 5-Fold Cross-Validation</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card shadow-sm">
+                                                    <div class="card-body">
+                                                        <h4 class="border-bottom pb-2 text-primary">Target Distribution</h4>
+                                                        <div class="text-center p-3">
+                                                            <img id="targetDistributionChart" class="img-fluid" alt="Target Distribution">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Data Insights Tab -->
+                                    <div class="tab-pane fade" id="dataInsights" role="tabpanel">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card shadow-sm mb-4">
+                                                    <div class="card-body">
+                                                        <h4 class="border-bottom pb-2 text-primary">Data Sample</h4>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-sm table-hover" id="dataSampleTable">
+                                                                <thead>
+                                                                    <tr id="sampleTableHeader"></tr>
+                                                                </thead>
+                                                                <tbody id="sampleTableBody"></tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card shadow-sm">
+                                                    <div class="card-body">
+                                                        <h4 class="border-bottom pb-2 text-primary">Feature Types</h4>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <h5 class="fs-6 fw-bold">Numerical Features</h5>
+                                                                <ul id="numericalFeaturesList" class="list-group list-group-flush"></ul>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h5 class="fs-6 fw-bold">Categorical Features</h5>
+                                                                <ul id="categoricalFeaturesList" class="list-group list-group-flush"></ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card shadow-sm mb-4">
+                                                    <div class="card-body">
+                                                        <h4 class="border-bottom pb-2 text-primary">Correlation Matrix</h4>
+                                                        <div class="text-center p-3">
+                                                            <img id="correlationMatrix" class="img-fluid" alt="Correlation Matrix">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card shadow-sm">
+                                                    <div class="card-body">
+                                                        <h4 class="border-bottom pb-2 text-primary">Missing Values</h4>
+                                                        <div id="missingValuesContainer">
+                                                            <p class="text-success">No missing values found.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Model Comparison Tab -->
+                                    <div class="tab-pane fade" id="modelComparison" role="tabpanel">
+                                        <div class="card shadow-sm mb-4">
+                                            <div class="card-body">
+                                                <h4 class="border-bottom pb-2 text-primary">Model Performance Comparison</h4>
+                                                <div class="text-center p-3">
+                                                    <img id="modelComparisonChart" class="img-fluid" alt="Model Comparison">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card shadow-sm">
+                                            <div class="card-body">
+                                                <h4 class="border-bottom pb-2 text-primary">Detailed Model Scores (K-Fold CV)</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover" id="modelScoresTable">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <th>Model</th>
+                                                                <th>Fold 1</th>
+                                                                <th>Fold 2</th>
+                                                                <th>Fold 3</th>
+                                                                <th>Fold 4</th>
+                                                                <th>Fold 5</th>
+                                                                <th>Average</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="modelScoresTableBody"></tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Feature Importance Tab -->
+                                    <div class="tab-pane fade" id="featureImportance" role="tabpanel">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body">
+                                                <h4 class="border-bottom pb-2 text-primary">Feature Importance</h4>
+                                                <div id="featureImportanceContainer">
+                                                    <div class="text-center p-3">
+                                                        <img id="featureImportanceChart" class="img-fluid" alt="Feature Importance">
+                                                    </div>
+                                                    <div class="table-responsive mt-4">
+                                                        <table class="table table-hover" id="featureImportanceTable">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                    <th>Feature</th>
+                                                                    <th>Importance</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="featureImportanceTableBody"></tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div id="noFeatureImportance" class="d-none">
+                                                    <div class="alert alert-info">
+                                                        Feature importance is not available for the selected model.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-4 mt-auto">
+            <div class="container">
+                <p class="mb-0">&copy; 2025 ML Model Finder - Find the optimal model for your data</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

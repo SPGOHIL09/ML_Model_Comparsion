@@ -1,0 +1,10 @@
+Flask
+Flask-Cors
+pandas
+scikit-learn
+numpy
+matplotlib
+seaborn
+xgboost
+openpyxl
+Werkzeug

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200">
+  <!-- Cloud background shape -->
+  <path d="M190,110c0,22.1-17.9,40-40,40H90c-22.1,0-40-17.9-40-40c0-19.3,13.7-35.4,31.8-39.2c-0.5-2.5-0.8-5.1-0.8-7.8c0-22.1,17.9-40,40-40c16.9,0,31.3,10.5,37.1,25.3c15.6,1.6,27.9,14.8,27.9,30.9c0,3.4-0.6,6.7-1.6,9.8C186.9,94.1,190,101.7,190,110z" fill="#e6f2ff" stroke="#4a89dc" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Paper document with corner fold -->
+  <g transform="translate(95, 70)">
+    <path d="M-35,-25 L25,-25 L25,25 L-35,25 Z" fill="#ffffff" stroke="#4a89dc" stroke-width="2"/>
+    <path d="M25,-25 L25,-15 L15,-25 Z" fill="#4a89dc"/>
+    <line x1="-20" y1="-10" x2="10" y2="-10" stroke="#4a89dc" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-20" y1="0" x2="10" y2="0" stroke="#4a89dc" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-20" y1="10" x2="10" y2="10" stroke="#4a89dc" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Upload arrow -->
+  <g transform="translate(120, 55)">
+    <circle cx="0" cy="0" r="25" fill="#4a89dc" opacity="0.2"/>
+    <path d="M0,-15 L0,15 M-12,0 L0,-12 L12,0" stroke="#4a89dc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  
+  <!-- CSV file icon -->
+  <g transform="translate(75, 140)">
+    <rect x="-15" y="-15" width="30" height="30" rx="2" fill="#ffffff" stroke="#4a89dc" stroke-width="1.5"/>
+    <text x="0" y="5" font-family="Arial" font-size="12" text-anchor="middle" fill="#4a89dc" font-weight="bold">CSV</text>
+  </g>
+  
+  <!-- Excel file icon -->
+  <g transform="translate(165, 140)">
+    <rect x="-15" y="-15" width="30" height="30" rx="2" fill="#ffffff" stroke="#4a89dc" stroke-width="1.5"/>
+    <text x="0" y="5" font-family="Arial" font-size="12" text-anchor="middle" fill="#4a89dc" font-weight="bold">XLS</text>
+  </g>
+  
+  <!-- Small dots for decoration -->
+  <circle cx="60" cy="70" r="3" fill="#4a89dc" opacity="0.5"/>
+  <circle cx="180" cy="70" r="3" fill="#4a89dc" opacity="0.5"/>
+  <circle cx="60" cy="160" r="3" fill="#4a89dc" opacity="0.5"/>
+  <circle cx="180" cy="160" r="3" fill="#4a89dc" opacity="0.5"/>
+</svg>
