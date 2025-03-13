@@ -5,7 +5,6 @@ scikit-learn
 numpy
 matplotlib
 seaborn
-xgboost
 openpyxl
 Werkzeug
 gunicorn
