@@ -2,3 +2,4 @@
 /.venv
 .vercel
 /app.__pycache__
+/images
